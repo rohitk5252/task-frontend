@@ -502,6 +502,10 @@ button:disabled {
   padding: 4px 7px;
 }
 
+.ytagYellow, .ytagGreen {
+  margin-right: 4px; 
+}
+
 .task-container .flexGroup {
   display: flex;
   align-items: center;
