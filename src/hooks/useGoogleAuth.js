@@ -22,7 +22,7 @@ export const useGoogleAuth = () => {
                 localStorage.setItem('user', JSON.stringify(data))
                 dispatch({ type: 'LOGIN', payload: data })
             }
-              console.log("Google Auth Success:", data);
+              // console.log("Google Auth Success:", data);
         } catch (err) {
           console.error("googleAuthResult", err)
         }

@@ -25,7 +25,7 @@ const Home = () => {
   ];
 
   const handleSelect = (selectedOption) => {
-    console.log("selectedOption", selectedOption);
+    // console.log("selectedOption", selectedOption);
     setOrderBy(selectedOption.value);
   };
 

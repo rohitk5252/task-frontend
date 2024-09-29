@@ -12,7 +12,7 @@ const Navbar = () => {
   const location = useLocation();
   const [isActive, setIsActive] = useState(false);
 
-  console.log(isActive)
+  // console.log(isActive)
   const handleClick = () => {
     logout();
   };
@@ -23,7 +23,6 @@ const Navbar = () => {
     }
   }, [user?.userAvatar])
 
-  console.log("avatarData--------------------------", avatarData)
   return (
     <>
     {isActive && <AvatarBuilder setIsActive={setIsActive} avatarData={avatarData} setAvaratData={setAvaratData}/> }

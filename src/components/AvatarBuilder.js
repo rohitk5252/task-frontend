@@ -18,11 +18,11 @@ const AvatarBuilder = ({
   const { user } = useAuthContext();
   const config = genConfig(updatedAvatar);
 
-  console.log("config", config);
+  // console.log("config", config);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("user", user)
+    // console.log("user", user)
     if (!user) {
       setError("You must be logged in");
       return;
@@ -38,7 +38,7 @@ const AvatarBuilder = ({
     });
     const json = await response.json();
     if (!response.ok) {
-      console.log(json.error);
+      // console.log(json.error);
       setError(json.error);
     }
 
@@ -47,7 +47,7 @@ const AvatarBuilder = ({
       let userData = JSON.parse(localStorage.getItem('user'))
       userData.userAvatar = json.userAvatar
       localStorage.setItem('user', JSON.stringify(userData))
-      console.log("userData------",userData)
+      // console.log("userData------",userData)
       dispatch({ type: 'LOGIN', payload: userData })
       setAvaratData(updatedAvatar)
       setIsActive(false);

@@ -37,7 +37,7 @@ const TaskForm = ({ isActive, setIsActive, editMode, taskData, viewMode }) => {
     });
     const json = await response.json();
     if (!response.ok) {
-      console.log(json.error);
+      // console.log(json.error);
       setError(json.error);
       setEmptyFields(json.emptyFields);
     }
@@ -46,7 +46,7 @@ const TaskForm = ({ isActive, setIsActive, editMode, taskData, viewMode }) => {
       setError(null);
       setEmptyFields([]);
       dispatch({ type: "CREATE_TASK", payload: json });
-      console.log("New Task Added");
+      // console.log("New Task Added");
       setIsActive(false);
     }
   };
@@ -71,7 +71,7 @@ const TaskForm = ({ isActive, setIsActive, editMode, taskData, viewMode }) => {
     );
     const json = await response.json();
     if (!response.ok) {
-      console.log(json.error);
+      // console.log(json.error);
       setError(json.error);
       setEmptyFields(json.emptyFields);
     }
@@ -80,7 +80,7 @@ const TaskForm = ({ isActive, setIsActive, editMode, taskData, viewMode }) => {
       setError(null);
       setEmptyFields([]);
       dispatch({ type: "UPDATE_TASK", payload: json });
-      console.log("New Task Added");
+      // console.log("New Task Added");
       setIsActive(false);
     }
   };
@@ -90,7 +90,7 @@ const TaskForm = ({ isActive, setIsActive, editMode, taskData, viewMode }) => {
       setPostData(taskData);
     }
   }, [editMode, viewMode]);
-  console.log("taskData", taskData);
+  // console.log("taskData", taskData);
 
   return (
     <div className="task-modal">
