@@ -72,7 +72,7 @@ const AvatarBuilder = ({
         </div>
         <form>
           <div className="flexGroup">
-            <div>
+            {/* <div>
               <label htmlFor="">Gender:</label>
               <Dropdown
                 options={[
@@ -81,7 +81,7 @@ const AvatarBuilder = ({
                 ]}
                 onSelect={(option) => handleSelect(option, "sex")}
               />
-            </div>
+            </div> */}
             <div>
               <label htmlFor="">Face Color:</label>
               <input
@@ -92,19 +92,6 @@ const AvatarBuilder = ({
                 onChange={onChangeInput}
               />
             </div>
-          </div>
-          <div className="flexGroup">
-            <div>
-              <label htmlFor="">Hair Color:</label>
-              <input
-                type="color"
-                name="hairColor"
-                value={avatarData?.hairColor}
-                placeholder=""
-                onChange={onChangeInput}
-              />
-            </div>
-
             <div>
               <label htmlFor="">Hair Style:</label>
               <Dropdown
@@ -121,6 +108,16 @@ const AvatarBuilder = ({
           </div>
           <div className="flexGroup">
             <div>
+              <label htmlFor="">Hair Color:</label>
+              <input
+                type="color"
+                name="hairColor"
+                value={avatarData?.hairColor}
+                placeholder=""
+                onChange={onChangeInput}
+              />
+            </div>
+            <div>
               <label htmlFor="">Hat Style:</label>
               <Dropdown
                 options={[
@@ -131,6 +128,8 @@ const AvatarBuilder = ({
                 onSelect={(option) => handleSelect(option, "hatStyle")}
               />
             </div>
+          </div>
+          <div className="flexGroup">
             <div>
               <label htmlFor="">Eye Style:</label>
               <Dropdown
@@ -142,8 +141,6 @@ const AvatarBuilder = ({
                 onSelect={(option) => handleSelect(option, "eyeStyle")}
               />
             </div>
-          </div>
-          <div className="flexGroup">
             <div>
               <label htmlFor="">Glasses Style:</label>
               <Dropdown
@@ -153,6 +150,18 @@ const AvatarBuilder = ({
                   { value: "square", label: "square" },
                 ]}
                 onSelect={(option) => handleSelect(option, "glassesStyle")}
+              />
+            </div>
+          </div>
+          <div className="flexGroup">
+          <div>
+              <label htmlFor="">Ear Size:</label>
+              <Dropdown
+                options={[
+                  { value: "small", label: "small" },
+                  { value: "big", label: "big" },
+                ]}
+                onSelect={(option) => handleSelect(option, "earSize")}
               />
             </div>
             <div>

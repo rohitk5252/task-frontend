@@ -392,12 +392,14 @@ div .success {
   display: grid;
   place-items: center;
   background: rgba(0,0,0, 0.8);
+  z-index: 1;
+  padding: 20px;
 }
 
 .task-container {
   background: white;
   width: 100%;
-  max-width: 400px;
+  max-width: 450px;
   min-height: 400px;
   padding: 16px;
   border-radius: 4px;
@@ -417,10 +419,12 @@ div .success {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  margin-bottom: 30px ;
 }
 
 .task-container form label {
   margin-bottom: 4px;
+  white-space: nowrap;
 }
 
 .task-container form input {
@@ -450,6 +454,7 @@ div .success {
 .p-0 {
   padding: 0;
 }
+.dropdown span, .dropdown-menu li{text-transform: capitalize}
 
 .no-data {
   display: flex;
@@ -502,15 +507,19 @@ button:disabled {
   align-items: center;
   justify-content: space-between;
   padding: 6px;
-  border-bottom: 1px solid;
+  /* border-bottom: 1px solid; */
+  gap: 6px;
 }
 
 .task-container .flexGroup div {
  width: 50%;
  display: flex;
  align-items: center;
- justify-content: space-between;
+ gap: 6px;
+ /* justify-content: space-between; */
 }
+
+.flexGroup h4 {font-size: 18px; color: #444444; font-weight: 500}
 
 @media (max-width: 1040px) {
   .tasks-container {
@@ -543,4 +552,10 @@ button:disabled {
   .task-list {
     grid-template-columns: 1fr;
   }
+}
+
+@media (max-width: 524px) {
+  .task-container {max-width: 100%}
+  .task-container .flexGroup div {width: 70%}
+  .task-container .flexGroup {flex-direction: column}
 }
