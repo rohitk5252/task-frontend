@@ -95,7 +95,7 @@ const TaskForm = ({ isActive, setIsActive, editMode, taskData, viewMode }) => {
   return (
     <div className="task-modal">
       <div className="task-container">
-        <h2>{editMode ? `Edit Task` : `Add New Task`}</h2>
+        <h2>{editMode ? `Edit Task` : `Add Task`}</h2>
         <form>
           <div>
             <label>Title:</label>
